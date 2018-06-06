@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.kiev'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework.batch', name: 'spring-batch-core', version: '3.0.9.RELEASE'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.197'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '3.2.18.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jms', version: '3.2.18.RELEASE'
+    compile group: 'org.apache.activemq', name: 'activemq-spring', version: '5.8.0'
+}

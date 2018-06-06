@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WebSocketsDemo</title>
+    <link rel='stylesheet' href='/webjars/bootstrap/css/bootstrap.min.css'>
+</head>
+<body>
+<div id="container">
+    <h1>WebSockets Demo</h1>
+    <span th:text="'Message: ' + ${message}"></span>
+</div>
+<div id="message-container">
+
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+</div>
+</body>
+</html>
