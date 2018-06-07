@@ -2,4 +2,6 @@ rootProject.name = 'generic-sandbox'
 include 'junit-5-sandbox'
 include 'yaml-parsing-sandbox'
 include 'spring-batch-sandbox'
+include 'rx-sandbox'
+include 'java-10-sandbox'
 
