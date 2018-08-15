@@ -1,11 +1,8 @@
 package app.txrate;
 
-import app.domain.Person;
 import app.domain.txrate.TaxRate;
-import app.domain.txrate.TaxRateItem;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.sun.xml.internal.txw2.TxwException;
 
 import java.io.IOException;
 import java.nio.file.Path;
