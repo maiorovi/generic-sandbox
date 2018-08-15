@@ -28,15 +28,15 @@
     </batch:job>
 
     <bean id="jdbcItemReader" class=" org.springframework.batch.item.database.JdbcCursorItemReader">
-        <property name="dataSource" ref="dataSource" />
-        <property name="rowMapper" ref="itemRowMapper" />
-        <property name="sql" value="select * from Item" />
+        <property description="dataSource" ref="dataSource" />
+        <property description="rowMapper" ref="itemRowMapper" />
+        <property description="sql" value="select * from Item" />
     </bean>
 
     <bean id="itemRowMapper" class="core.db.ItemRowMapper" />
 
     <bean id="queueItemWriter" class="org.springframework.batch.item.jms.JmsItemWriter">
-        <property name="jmsTemplate" ref="jmsTemplate" />
+        <property description="jmsTemplate" ref="jmsTemplate" />
     </bean>
 
     <jdbc:embedded-database type="H2" id="dataSource">
@@ -50,11 +50,11 @@
                physicalName="destination.item" />
 
     <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
-        <property name="connectionFactory" ref="jmsFactory" />
-        <property name="defaultDestination" ref="itemDestination" />
-        <property name="receiveTimeout" value="500" />
-        <property name="sessionTransacted" value="true" />
-        <property name="messageConverter" ref="itemToMessageConverter" />
+        <property description="connectionFactory" ref="jmsFactory" />
+        <property description="defaultDestination" ref="itemDestination" />
+        <property description="receiveTimeout" value="500" />
+        <property description="sessionTransacted" value="true" />
+        <property description="messageConverter" ref="itemToMessageConverter" />
     </bean>
 
     <bean id="itemToMessageConverter" class="core.ItemMessageConverter" />

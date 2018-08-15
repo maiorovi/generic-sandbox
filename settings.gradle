@@ -4,4 +4,5 @@ include 'yaml-parsing-sandbox'
 include 'spring-batch-sandbox'
 include 'rx-sandbox'
 include 'java-10-sandbox'
+include 'jackson-yaml-sandbox'
 

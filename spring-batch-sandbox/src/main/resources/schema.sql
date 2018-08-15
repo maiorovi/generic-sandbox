@@ -1,4 +1,4 @@
 create Table Item (
-  name varchar(255),
+  description varchar(255),
   address text
 );

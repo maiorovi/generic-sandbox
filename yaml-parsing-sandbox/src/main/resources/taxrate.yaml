@@ -1,0 +1,17 @@
+- cconsole: 1234
+  taxrate:
+    - ittcode: 123
+      date: 2018-01-01
+      name: somename
+    - ittcode: 456
+      data: 2018-05-03
+      name: somename
+
+- cconsole: 567
+  taxrate:
+    - ittcode: 123
+      date: 2018-01-01
+      name: somename
+    - ittcode: 456
+      data: 2018-05-03
+      name: somename

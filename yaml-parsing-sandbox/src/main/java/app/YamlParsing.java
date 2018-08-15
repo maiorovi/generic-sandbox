@@ -11,7 +11,7 @@ import java.time.Period;
 
 public class YamlParsing {
     public static void main(String[] args) throws IOException {
-        final Path path = Paths.get("G:\\Projects\\open-source\\generic-sandbox\\yaml-parsing-sandbox\\src\\main\\resources\\person.yaml");
+        final Path path = Paths.get("/app/Projects/open-source/generic-sandbox/yaml-parsing-sandbox/src/main/resources/person.yaml");
         final ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
         final Person person = objectMapper.readValue(path.toFile(), Person.class);
 

@@ -1,15 +1,15 @@
 package app.domain;
 
 public class PhoneNumber {
-    private String name;
+    private String description;
     private String number;
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getNumber() {
@@ -23,7 +23,7 @@ public class PhoneNumber {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("PhoneNumber{");
-        sb.append("name='").append(name).append('\'');
+        sb.append("description='").append(description).append('\'');
         sb.append(", number='").append(number).append('\'');
         sb.append('}');
         return sb.toString();

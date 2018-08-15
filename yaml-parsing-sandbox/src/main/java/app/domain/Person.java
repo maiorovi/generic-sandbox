@@ -1,15 +1,14 @@
 package app.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 import java.util.List;
 
 public class Person {
     private String name;
+    private String homeAddress;
     private String age;
-    private String address;
-    @JsonProperty("phone numbers")
-    private List<PhoneNumber> phoneNumbers;
 
     public Person() {
     }
@@ -40,24 +39,17 @@ public class Person {
         final StringBuffer sb = new StringBuffer("Person{");
         sb.append("name='").append(name).append('\'');
         sb.append(", age='").append(age).append('\'');
-        sb.append(", clubs='").append(phoneNumbers).append('\'');
+        sb.append(", address='").append(getHomeAddress()).append('\'');
         sb.append('}');
         return sb.toString();
     }
 
-    public List<PhoneNumber> getPhoneNumbers() {
-        return phoneNumbers;
+    public String getHomeAddress() {
+        return homeAddress;
     }
 
-    public void setPhoneNumbers(List<PhoneNumber> phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    @JsonProperty("address")
+    public void setHomeAddress(String homeAddress) {
+        this.homeAddress = homeAddress;
     }
 }
